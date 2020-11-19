@@ -18,15 +18,15 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/google-books", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false
-});
-mongoose.connection.on("connected", () => {
-    console.log("Mongoose is connected!!!!");
-});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/google-books", { useNewUrlParser: true }); 
+  // useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex: true,
+//   useFindAndModify: false
+// });
+// mongoose.connection.on("connected", () => {
+//     console.log("Mongoose is connected!!!!");
+// });
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT: http://localhost:3000 ${PORT}!`);
