@@ -36,7 +36,7 @@ function SearchResults(props) {
                                     </a>
                                     <button onClick={()=>props.handleBookSave(book)} className="btn btn-info list-button"
                                     >
-                                    Save to reading list
+                                    Save to My Saved Books
                                     </button>
                                 </td>
                             </tr>
